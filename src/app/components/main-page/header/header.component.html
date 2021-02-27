@@ -1,3 +1,15 @@
-<header class="bg-secondary p-3">
-  <h1>Header</h1>
+<header class="bg-light py-3 px-5 border-bottom">
+  <div class="d-flex justify-content-between align-items-center">
+    <h3 class="mb-0">Consulta de pedidos de E-Chequeras</h3>
+    <button class="btn btn-success shadow-none" (click)="mostrar = !mostrar">
+      Filtrar
+    </button>
+  </div>
+  <div
+    class="d-flex justify-content-between align-items-center mt-3"
+    *ngIf="mostrar"
+  >
+    <h3>Consulta de pedidos de E-Chequeras x2</h3>
+    <button class="btn btn-success">Filtrar</button>
+  </div>
 </header>

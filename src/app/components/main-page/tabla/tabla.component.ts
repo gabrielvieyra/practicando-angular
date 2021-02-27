@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MainPageService } from '../services/main-page.service';
 
 @Component({
   selector: 'app-tabla',
@@ -6,11 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class TablaComponent implements OnInit {
+export class TablaComponent {
+  constructor(private mainPageService: MainPageService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  iniciarApp() {
+    this.mainPageService.obtenerInformacion();
   }
-
 }
